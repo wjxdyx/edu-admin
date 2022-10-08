@@ -1,0 +1,104 @@
+@use "./layout.scss" as *;
+@use "./themes.scss" as *;
+@use "./element.customized.scss" as *;
+@use "./element.customized.dark.scss" as *;
+@use "./element.table.scss" as *;
+
+// 全局样式
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(0 0 0 / 40%);
+    background-clip: padding-box;
+    border: 3px solid transparent;
+    border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(0 0 0 / 50%);
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Lato, "PingFang SC", "Microsoft YaHei", sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    &.hidden {
+        overflow: hidden;
+    }
+}
+* {
+    box-sizing: inherit;
+}
+// 右侧内容区针对fixed元素，有横向铺满的需求，可在fixed元素上设置 [data-fixed-calc-width]
+[data-fixed-calc-width] {
+    position: fixed;
+    left: 50%;
+    right: 0;
+    width: calc(100% - var(--g-main-sidebar-actual-width) - var(--g-sub-sidebar-actual-width));
+    transform: translateX(-50%) translateX(calc(var(--g-main-sidebar-actual-width) / 2)) translateX(calc(var(--g-sub-sidebar-actual-width) / 2));
+}
+[data-mode="mobile"] {
+    [data-fixed-calc-width] {
+        width: 100% !important;
+        transform: translateX(-50%) !important;
+    }
+}
+// textarea 字体跟随系统
+textarea {
+    font-family: inherit;
+}
+.translate-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.df {
+    display: flex;
+}
+.df.center {
+    align-items: center;
+    align-content: center;
+}
+.jc-sb {
+    justify-content: space-between;
+}
+.jc-fs {
+    justify-content: flex-start;
+}
+// .mr-#{$i}{ background-position: -0 -#{+ $i*30}px; }
+@for $i from 1 to 100 {
+    .m-#{$i} { margin: #{ $i}px; }
+}
+@for $i from 1 through 100 {
+    .mr-#{$i} { margin-right: #{ $i}px; }
+}
+@for $i from 1 through 100 {
+    .mt-#{$i} { margin-top: #{ $i}px; }
+}
+@for $i from 1 through 100 {
+    .mb-#{$i} { margin-bottom: #{ $i}px; }
+}
+@for $i from 1 through 100 {
+    .ml-#{$i} { margin-left: #{ $i}px; }
+}
+@for $i from 1 through 100 {
+    .p-#{$i} { padding: #{ $i}px; }
+}
+@for $i from 1 through 100 {
+    .w-#{$i} { width: #{$i+"%"} !important; }
+}
+@for $i from 1 through 100 {
+    .h-#{$i} { height: #{$i+"%"} !important; }
+}
+.line {
+    border: 1px solid red;
+}

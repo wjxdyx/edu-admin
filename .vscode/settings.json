@@ -1,0 +1,17 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+        "source.fixAll.stylelint": true
+    },
+    "stylelint.validate": [
+        "css",
+        "scss",
+        "vue"
+    ],
+    "js/ts.implicitProjectConfig.strictFunctionTypes": false,
+    "typescript.validate.enable": false,
+    "javascript.validate.enable": false,
+    "js/ts.implicitProjectConfig.strictNullChecks": false,
+    "typescript.suggest.includeAutomaticOptionalChainCompletions": false,
+    "typescript.suggest.includeCompletionsWithSnippetText": false
+}

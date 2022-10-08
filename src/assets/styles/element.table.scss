@@ -1,0 +1,53 @@
+// element table 的样式这个得在页面内引用 在 globals 内引用无生效
+// 目前引用在 layout/index
+:deep(.el-table th.el-table__cell > .cell) {
+    font-weight: initial !important;
+}
+// 列表页全局样式
+:deep(.el-table.list-table) {
+    margin: 20px 0;
+    .el-button + .el-dropdown {
+        margin-left: 10px;
+    }
+}
+// 自定义表格内 账户状态下拉框样式
+:deep(td.table-state .cell) {
+    display: flex;
+    align-items: center;
+}
+// 给表头增加分割线
+:deep(th.el-table__cell) {
+    border-right: 1px solid #eee !important;
+}
+:deep(th.el-table__cell):last-of-type {
+    border-right: 0 !important;
+}
+// 给表格单元格去掉padding 居中
+:deep(td.no-padding) {
+    .cell {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    padding: 0 !important;
+}
+// 表格单元格里自定义的下拉样式
+.table-dropdown {
+    display: flex;
+}
+// 给table-header-filter自定义表格的表头去掉padding
+:deep(.table-header-filter th.el-table__cell) {
+    // padding: 0 !important;
+    .cell {
+        // height: 40px !important;
+        display: flex;
+        align-items: center;
+    }
+    .el-input__wrapper {
+        border-radius: 0;
+        padding: 0 !important;
+        box-shadow: initial !important;
+        font-size: 14px !important;
+    }
+}

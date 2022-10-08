@@ -1,0 +1,42 @@
+{
+    "app": {
+        "colorScheme": "light",
+        "elementSize": "default",
+        "iconifyOfflineUse": false,
+        "enablePermission": true,
+        "enableProgress": true,
+        "enableDynamicTitle": true,
+        "routeBaseOn": "frontend"
+    },
+    "dashboard": {
+        "enable": true,
+        "title": "控制台"
+    },
+    "layout": {
+        "enableMobileAdaptation": true
+    },
+    "menu": {
+        "baseOn": "frontend",
+        "menuMode": "head",
+        "switchMainMenuAndPageJump": false,
+        "subMenuUniqueOpened": false,
+        "subMenuCollapse": false
+    },
+    "topbar": {
+        "fixed": true,
+        "enableSidebarCollapse": true,
+        "enableBreadcrumb": true,
+        "enableNavSearch": true,
+        "enableFullscreen": true,
+        "enablePageReload": true,
+        "enableColorScheme": true,
+        "enableAppSetting": true
+    },
+    "copyright": {
+        "enable": false,
+        "dates": "2020-2022",
+        "company": "瑞源泽",
+        "website": "",
+        "beian": ""
+    }
+}
